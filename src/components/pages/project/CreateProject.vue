@@ -66,7 +66,7 @@ export default (  {
     },
 
     submitproject: function(){        
-      axios.post('http://127.0.0.1:8000/api/storeProject', this.projects)
+      axios.post('https://backend-v01.herokuapp.com/api/storeProject', this.projects)
       
       .then( () => {
         alert("Thêm dự án thành công!");

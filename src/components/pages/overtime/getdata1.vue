@@ -50,7 +50,7 @@ export default ({
 
   methods:{
     checklogin: function(){
-      axios.get('http://127.0.0.1:8000/api/getdata1',{
+      axios.get('https://backend-v01.herokuapp.com/api/getdata1',{
       })
       .then(response => {
         this.dataOvertime = response.data;

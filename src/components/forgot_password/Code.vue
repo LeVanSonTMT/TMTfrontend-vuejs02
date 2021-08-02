@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     Code: function(){
-        axios.post('http://127.0.0.1:8000/api/check-code', {'code':this.code})
+        axios.post('https://backend-v01.herokuapp.com/api/check-code', {'code':this.code})
       .then( (res) => {
           if(res.status == 201){
             alert("Xác thực thành công!");

@@ -62,7 +62,7 @@ export default (  {
 
   methods: {
     checklogin: function(id){
-      axios.get('http://127.0.0.1:8000/api/editWorkingtime/'+id, {
+      axios.get('https://backend-v01.herokuapp.com/api/editWorkingtime/'+id, {
       })
       .then( response => {
         this.workingtime = response.data[0];       
@@ -74,7 +74,7 @@ export default (  {
     },  
 
     updatecheckform: function(){        
-      axios.post('http://127.0.0.1:8000/api/updateWorkingtime/'+this.id_url, this.workingtime)
+      axios.post('https://backend-v01.herokuapp.com/api/updateWorkingtime/'+this.id_url, this.workingtime)
       
       .then( () => {
         alert("Đã check out thành công!");

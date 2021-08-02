@@ -64,7 +64,7 @@ export default (  {
 
   methods: {
     checklogin: function(id){
-      axios.get('http://127.0.0.1:8000/api/editProject/'+id, {
+      axios.get('https://backend-v01.herokuapp.com/api/editProject/'+id, {
       })
       .then( response => {
         this.projects = response.data[0];       
@@ -76,7 +76,7 @@ export default (  {
     },  
 
     updateproject: function(){        
-      axios.post('http://127.0.0.1:8000/api/updateProject/'+this.id_url, this.projects)
+      axios.post('https://backend-v01.herokuapp.com/api/updateProject/'+this.id_url, this.projects)
       
       .then( () => {
         //alert("Đã Check_in thành công!");

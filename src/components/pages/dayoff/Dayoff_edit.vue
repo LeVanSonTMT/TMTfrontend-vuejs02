@@ -95,7 +95,7 @@
 
   methods:{   
     checklogin: function(id){
-      axios.get('http://127.0.0.1:8000/api/dayoff-edit/'+id, {
+      axios.get('https://backend-v01.herokuapp.com/api/dayoff-edit/'+id, {
       })
       .then( response => {
         this.day_off = response.data[0];       
@@ -110,7 +110,7 @@
     editDayOff: function(){        
       const newDate = new Date().toISOString().slice(0,10);
       if(newDate <= this.day_off.start_off){
-        axios.post('http://127.0.0.1:8000/api/dayoff-update/'+this.id_url,
+        axios.post('https://backend-v01.herokuapp.com/api/dayoff-update/'+this.id_url,
             this.day_off
         )
         .then( () => {

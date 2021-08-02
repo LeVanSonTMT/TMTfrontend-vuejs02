@@ -20,7 +20,7 @@
                         <td>{{data.reason}}</td>
                         <td>{{data.ngayDK}}</td>
                         <td>
-                          <a :href="'http://localhost:8080/EditOvertime/'+data.id"  class='btn btn-warning' ><i class="fas fa-pencil-alt"></i> Sửa </a>
+                          <a :href="'https://frontendvuejs-v01.herokuapp.com/EditOvertime/'+data.id"  class='btn btn-warning' ><i class="fas fa-pencil-alt"></i> Sửa </a>
                           <a href="" class='btn btn-danger' @click.prevent="click_detroy(data.id)" ><i class="fas fa-trash"></i> Xóa </a>
                         </td>
                     </tr>
@@ -81,7 +81,7 @@ export default ({
     checklogin: function(){
         var id_user =  JSON.parse(localStorage.getItem('user')).user.id; 
         // console.log('s : ', id_user);
-        axios.get('http://127.0.0.1:8000/api/showOT/'+id_user,{
+        axios.get('https://backend-v01.herokuapp.com/api/showOT/'+id_user,{
         })
         .then( response => {
             this.dataOvertime0 = response.data[0];        
@@ -96,7 +96,7 @@ export default ({
     },
 
     click_detroy: function(id){
-        axios.get('http://127.0.0.1:8000/api/destroyOT/'+id,{
+        axios.get('https://backend-v01.herokuapp.com/api/destroyOT/'+id,{
             
         })
         .then( res => {

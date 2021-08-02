@@ -109,7 +109,7 @@ export default ({
 
   methods: {
     checklogin: function(id){
-      axios.get('http://127.0.0.1:8000/api/editReportProject/'+id, {
+      axios.get('https://backend-v01.herokuapp.com/api/editReportProject/'+id, {
       })
       .then( response => {
         this.reports = response.data[0];       
@@ -121,7 +121,7 @@ export default ({
     },  
 
     checkproject: function(){
-      axios.get('http://127.0.0.1:8000/api/getProject',{
+      axios.get('https://backend-v01.herokuapp.com/api/getProject',{
       })
       .then(response => {
         this.dataProject = response.data;
@@ -135,7 +135,7 @@ export default ({
     },
 
     updateReportProject: function(){        
-      axios.post('http://127.0.0.1:8000/api/updateReportProject/'+ this.id_url, this.reports)
+      axios.post('https://backend-v01.herokuapp.com/api/updateReportProject/'+ this.id_url, this.reports)
       
       .then( () => {
         alert("Đã Update thành công!");

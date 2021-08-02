@@ -22,7 +22,7 @@
                 <tbody>                    
                     <tr v-for="(data, i) in dataReportProject" :key="i"> 
                         <td>
-                          <a :href="'http://127.0.0.1:8080/UpdateReportProject/'+ data.id_report"  class='btn btn-warning' > Update </a>
+                          <a :href="'https://frontendvuejs-v01.herokuapp.com/UpdateReportProject/'+ data.id_report"  class='btn btn-warning' > Update </a>
                         </td>
                         <td>{{data.id_report}}</td>
                         <td>{{data.name}}</td>
@@ -60,7 +60,7 @@ export default ({
   },
   methods:{
     checklogin: function(){
-      axios.get('http://127.0.0.1:8000/api/showReportProject',{
+      axios.get('https://backend-v01.herokuapp.com/api/showReportProject',{
       })
       .then(response => {
         this.dataReportProject = response.data;
@@ -72,7 +72,7 @@ export default ({
       })
     },
     checkproject: function(){
-      axios.get('http://127.0.0.1:8000/api/getProject',{
+      axios.get('https://backend-v01.herokuapp.com/api/getProject',{
       })
       .then(response => {
         this.dataProject = response.data;

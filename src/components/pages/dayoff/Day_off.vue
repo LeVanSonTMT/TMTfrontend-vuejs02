@@ -54,7 +54,7 @@
                          {{data.off_reason}}
                       </td>
                       <td class="project-actions">
-                          <a :href="'http://localhost:8080/Dayoff_edit/'+data.id" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i> Sửa </a>
+                          <a :href="'https://frontendvuejs-v01.herokuapp.com/Dayoff_edit/'+data.id" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i> Sửa </a>
                           <a href="" class="btn btn-success btn-sm" @click.prevent="click_apply(data.id)" ><i class="fas fa-clipboard-check"></i> Duyệt </a>
                           <a href="" class="btn btn-danger btn-sm" @click.prevent="click_detroy(data.id)" ><i class="fas fa-trash"></i> Xóa </a>
                       </td>
@@ -88,7 +88,7 @@ export default ({
 
   methods:{
     checklogin: function(){
-      axios.get('http://127.0.0.1:8000/api/get-data/',{
+      axios.get('https://backend-v01.herokuapp.com/api/get-data/',{
       })
       .then( response => {
         this.dataDayOff = response.data;        
@@ -101,7 +101,7 @@ export default ({
     },
 
     click_apply: function(id){
-        axios.post('http://127.0.0.1:8000/api/approved-dayoff/'+id,
+        axios.post('https://backend-v01.herokuapp.com/api/approved-dayoff/'+id,
             this.user_localstore
         )
         .then( res => {
@@ -116,7 +116,7 @@ export default ({
     },
 
     click_detroy: function(id){
-        axios.get('http://127.0.0.1:8000/api/cancel-dayoff/'+id,{
+        axios.get('https://backend-v01.herokuapp.com/api/cancel-dayoff/'+id,{
             
         })
         .then( res => {

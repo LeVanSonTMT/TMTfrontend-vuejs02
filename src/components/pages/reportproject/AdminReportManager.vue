@@ -13,7 +13,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                              <li v-for="(data, i) in dataProject" :key="i"><a :href="'http://127.0.0.1:8080/ReportProjectManager/'+ data.id">Project: {{data.project_name}}</a></li>
+                              <li v-for="(data, i) in dataProject" :key="i"><a :href="'https://frontendvuejs-v01.herokuapp.com/ReportProjectManager/'+ data.id">Project: {{data.project_name}}</a></li>
                             </ul>
                           </div>
                         </th>
@@ -65,7 +65,7 @@ export default ({
   },
   methods:{
     checklogin: function(){
-      axios.get('http://127.0.0.1:8000/api/getReportProject',{
+      axios.get('https://backend-v01.herokuapp.com/api/getReportProject',{
       })
       .then(response => {
         this.dataReportProject = response.data;
@@ -77,7 +77,7 @@ export default ({
       })
     },
     checkproject: function(){
-      axios.get('http://127.0.0.1:8000/api/getProject',{
+      axios.get('https://backend-v01.herokuapp.com/api/getProject',{
       })
       .then(response => {
         this.dataProject = response.data;

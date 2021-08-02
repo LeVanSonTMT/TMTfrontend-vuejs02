@@ -10,7 +10,7 @@
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li v-for="(data, i) in dataUser" :key="i"><a :href="'http://127.0.0.1:8080/CheckTimeManager/'+ data.id">ID staff: {{data.id}}</a></li>
+                                    <li v-for="(data, i) in dataUser" :key="i"><a :href="'https://frontendvuejs-v01.herokuapp.com/CheckTimeManager/'+ data.id">ID staff: {{data.id}}</a></li>
                                 </ul>
                             </div>
                         </th>
@@ -65,7 +65,7 @@ export default ({
   },
   methods:{
     checklogin: function(id){
-      axios.get('http://127.0.0.1:8000/api/getManagerWorkingtime/'+ id,{
+      axios.get('https://backend-v01.herokuapp.com/api/getManagerWorkingtime/'+ id,{
       })
       .then(response => {
          this.dataworkingtime = response.data; 
@@ -78,7 +78,7 @@ export default ({
     },
 
     checkuser: function(){
-      axios.get('http://127.0.0.1:8000/api/getUser',{
+      axios.get('https://backend-v01.herokuapp.com/api/getUser',{
       })
       .then(response => {
         this.dataUser = response.data;

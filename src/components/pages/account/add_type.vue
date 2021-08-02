@@ -35,7 +35,7 @@ export default (  {
 
   methods: {
     add_type: function(){        
-      axios.post('http://127.0.0.1:8000/api/storeType')  
+      axios.post('https://backend-v01.herokuapp.com/api/storeType')  
       .then( () => {
         alert("Thêm loại tài khoản thành công");
         window.location.reload();

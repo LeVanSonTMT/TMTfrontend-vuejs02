@@ -144,7 +144,7 @@ export default ({
   methods:{
     checklogin: function(){
         var user_id =  JSON.parse(localStorage.getItem('user')).user.id; 
-        axios.get('http://127.0.0.1:8000/api/dayoff-show/'+user_id,{
+        axios.get('https://backend-v01.herokuapp.com/api/dayoff-show/'+user_id,{
         })
         .then( response => {
             this.dataDayOff = response.data[0];        
@@ -156,7 +156,7 @@ export default ({
     },
 
     click_detroy: function(id){
-        axios.get('http://127.0.0.1:8000/api/cancel-dayoff/'+id,{           
+        axios.get('https://backend-v01.herokuapp.com/api/cancel-dayoff/'+id,{           
         })
         .then( res => {
           alert("Đã xóa thành công!");

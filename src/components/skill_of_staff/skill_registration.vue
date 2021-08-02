@@ -121,13 +121,13 @@ export default ({
     checklogin: function(){
         this.user = JSON.parse(localStorage.getItem('user')).user;
         this.skillForm.id_user = this.user.id;
-        axios.get('http://127.0.0.1:8000/api/createSkill', { params: { id_user: this.user.id } })
+        axios.get('https://backend-v01.herokuapp.com/api/createSkill', { params: { id_user: this.user.id } })
         .then( (res) => {
             
             if((res.data[0].id_user == this.user.id)){              
               console.log('id: ',this.user.id);
               alert('Bạn đã đăng ký, vui lòng cập nhật lại thông tin nếu cần!');  
-              window.location.href = 'http://localhost:8080/skillEdit/'+this.user.id; 
+              window.location.href = 'https://frontendvuejs-v01.herokuapp.com/skillEdit/'+this.user.id; 
             }
             else{
               this.PS = res.data[0];
@@ -143,7 +143,7 @@ export default ({
     create: function(){      
       // console.log('DL SKILL = ',this.skillForm);
       // console.log('sdcs :',(this.skillForm.level));
-      axios.post('http://127.0.0.1:8000/api/storeSkill',
+      axios.post('https://backend-v01.herokuapp.com/api/storeSkill',
                this.skillForm
         )
         .then( (res) => {

@@ -53,7 +53,7 @@ export default {
     Change_Pass: function(){
       let email = localStorage.getItem('email');
       console.log("email", email);
-      axios.post('http://127.0.0.1:8000/api/change-password', {
+      axios.post('https://backend-v01.herokuapp.com/api/change-password', {
         password: this.password,
         password_confirm: this.password_confirm,
         email: email

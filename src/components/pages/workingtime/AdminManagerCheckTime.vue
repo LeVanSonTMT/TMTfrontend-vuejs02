@@ -62,7 +62,7 @@ export default ({
   },
   methods:{
     checklogin: function(){
-      axios.get('http://127.0.0.1:8000/api/getWorkingtime',{
+      axios.get('https://backend-v01.herokuapp.com/api/getWorkingtime',{
       })
       .then(response => {
         this.dataworkingtime = response.data;
@@ -75,7 +75,7 @@ export default ({
     },
 
     checkuser: function(){
-      axios.get('http://127.0.0.1:8000/api/getUser',{
+      axios.get('https://backend-v01.herokuapp.com/api/getUser',{
       })
       .then(response => {
         this.dataUser = response.data;

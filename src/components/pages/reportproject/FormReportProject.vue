@@ -116,7 +116,7 @@ export default ({
     },
 
     checkproject: function(){
-      axios.get('http://127.0.0.1:8000/api/getProject',{
+      axios.get('https://backend-v01.herokuapp.com/api/getProject',{
       })
       .then(response => {
         this.dataProject = response.data;
@@ -129,7 +129,7 @@ export default ({
       })
     },
     submitreportproject: function(){        
-      axios.post('http://127.0.0.1:8000/api/storeReportProject', this.reports)
+      axios.post('https://backend-v01.herokuapp.com/api/storeReportProject', this.reports)
       
       .then( () => {
         alert("Đã báo cáo thành công!");

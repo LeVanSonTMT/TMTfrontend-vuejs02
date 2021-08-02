@@ -126,7 +126,7 @@ export default ({
       const newDate = new Date().toISOString().slice(0, 10);
 
       if(this.overtime.ngayDK >= newDate){
-        axios.post('http://127.0.0.1:8000/api/storeOT',
+        axios.post('https://backend-v01.herokuapp.com/api/storeOT',
             this.overtime
           )
         .then( () => {

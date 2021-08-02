@@ -54,7 +54,7 @@ export default ({
 
   methods:{
     checklogin: function(){
-      axios.get('http://127.0.0.1:8000/api/getdata0',{
+      axios.get('https://backend-v01.herokuapp.com/api/getdata0',{
       })
       .then( response => {
         this.dataOvertime = response.data;        
@@ -68,7 +68,7 @@ export default ({
     },
 
     click_apply: function(id){
-        axios.post('http://127.0.0.1:8000/api/approveOT/'+id,
+        axios.post('https://backend-v01.herokuapp.com/api/approveOT/'+id,
             this.user_localstore
         )
         .then( () => {
@@ -83,7 +83,7 @@ export default ({
     },
 
     click_detroy: function(id){
-        axios.get('http://127.0.0.1:8000/api/destroyOT/'+id,{
+        axios.get('https://backend-v01.herokuapp.com/api/destroyOT/'+id,{
         })
         .then( res => {
           alert("Đã xóa thành công!");

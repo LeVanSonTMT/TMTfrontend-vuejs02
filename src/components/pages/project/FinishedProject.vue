@@ -50,7 +50,7 @@ export default ({
   },
   methods:{
     checklogin: function(){
-      axios.get('http://127.0.0.1:8000/api/showFinishedProject',{
+      axios.get('https://backend-v01.herokuapp.com/api/showFinishedProject',{
       })
       .then(response => {
         this.dataProject = response.data;
@@ -62,7 +62,7 @@ export default ({
       })
     },
     click_detroy: function(id){
-        axios.get('http://127.0.0.1:8000/api/destroyProject/'+id,{
+        axios.get('https://backend-v01.herokuapp.com/api/destroyProject/'+id,{
             
         })
         .then( res => {

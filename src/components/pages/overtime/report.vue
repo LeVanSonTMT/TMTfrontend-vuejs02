@@ -136,7 +136,7 @@ export default ({
 
   methods:{
     checklogin: function(){
-      axios.post('http://127.0.0.1:8000/api/getReport',
+      axios.post('https://backend-v01.herokuapp.com/api/getReport',
         this.dataInput
       )
       .then( response => {
@@ -156,7 +156,7 @@ export default ({
     click_submit: function(){
       if((this.dataInput.DayEnd >= this.dataInput.DayBegin ) && (this.dataInput.DayEnd <= new Date().toISOString().slice(0, 10))){
         
-        axios.post('http://127.0.0.1:8000/api/getReport',
+        axios.post('https://backend-v01.herokuapp.com/api/getReport',
             this.dataInput
           )
         .then( (response) => {
@@ -210,7 +210,7 @@ export default ({
 
 
   // click_Dowload: function(){
-    //     axios.post('http://127.0.0.1:8000/api/ExportExcel',
+    //     axios.post('https://backend-v01.herokuapp.com/api/ExportExcel',
     //           this.dataReport
     //       )
     //       .then( ($r) => {

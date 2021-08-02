@@ -93,7 +93,7 @@ export default ({
   methods:{
     
     checklogin: function(id){
-      axios.get('http://127.0.0.1:8000/api/editOT/'+id, {
+      axios.get('https://backend-v01.herokuapp.com/api/editOT/'+id, {
       })
       .then( response => {
         this.overtime = response.data[0];       
@@ -109,7 +109,7 @@ export default ({
     editOT: function(){        
       const newDate = new Date().toISOString().slice(0,10);
       if(newDate <= this.overtime.ngayDK){
-        axios.post('http://127.0.0.1:8000/api/updateOT/'+this.id_url,
+        axios.post('https://backend-v01.herokuapp.com/api/updateOT/'+this.id_url,
             this.overtime
         )
         .then( () => {

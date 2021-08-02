@@ -5,7 +5,7 @@
         <div class="row">
 
             <div class="col-sm">
-                <a href="http://localhost:8080/showdataSkill" class="btn btn-warning">Reset</a>
+                <a href="https://frontendvuejs-v01.herokuapp.com/showdataSkill" class="btn btn-warning">Reset</a>
             </div>
 
             <div class="col-sm">
@@ -170,7 +170,7 @@
         methods: {
             checklogin: function () {
                 // console.log("id:",this.id_user,"tyep:",JSON.parse(localStorage.getItem('user')).user.id_type);
-                axios.get('http://127.0.0.1:8000/api/showSkill', {
+                axios.get('https://backend-v01.herokuapp.com/api/showSkill', {
                 })
                     .then(response => {
                         this.dataShow = response.data[0];
@@ -186,7 +186,7 @@
             getResults: function () {
               if(this.keyword){
                 this.KT();
-                axios.get('http://127.0.0.1:8000/api/livesearch', { params: { keyword: this.keyword } })
+                axios.get('https://backend-v01.herokuapp.com/api/livesearch', { params: { keyword: this.keyword } })
                     .then(res => {
                         this.dataShow = res.data[0];
                         this.dataPS = res.data[1];
@@ -217,7 +217,7 @@
               var key = document.getElementById('select_skill').value;
               if(key){
                 this.KT();
-                axios.get('http://127.0.0.1:8000/api/livesearch', { params: { keyword: key } })
+                axios.get('https://backend-v01.herokuapp.com/api/livesearch', { params: { keyword: key } })
                     .then(res => {
                         this.dataShow = res.data[0];
                         this.dataPS = res.data[1];
@@ -247,7 +247,7 @@
             
                 click_detroy: function(id){  
                
-                    axios.get('http://127.0.0.1:8000/api/getDelete/'+id,{                        
+                    axios.get('https://backend-v01.herokuapp.com/api/getDelete/'+id,{                        
                     })
                     .then( res => {
                       alert("Đã xóa thành công!");

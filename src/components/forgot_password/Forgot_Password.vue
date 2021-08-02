@@ -47,7 +47,7 @@ export default {
 
   methods: {
     forgot: function(){        
-      axios.post('http://127.0.0.1:8000/api/forget-password', this.password_resets)
+      axios.post('https://backend-v01.herokuapp.com/api/forget-password', this.password_resets)
       .then( () => {
         console.log(this.password_resets.email)
         localStorage.setItem('email', this.password_resets.email )

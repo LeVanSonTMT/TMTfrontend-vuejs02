@@ -105,7 +105,7 @@
           createDayOff: function(){
             const newDate = new Date().toISOString().slice(0, 10);
       if(this.day_off.start_off >= newDate){
-        axios.post('http://127.0.0.1:8000/api/dayoff-register',
+        axios.post('https://backend-v01.herokuapp.com/api/dayoff-register',
             this.day_off
           )
         .then( () => {

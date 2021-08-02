@@ -26,7 +26,7 @@
                         <td>{{data.finish_data}}</td>
                         <td>{{data.detail}}</td>
                         <td>
-                          <a :href="'http://127.0.0.1:8080/UpdateProject/'+ data.id"  class='btn btn-warning' > Update </a>
+                          <a :href="'https://frontendvuejs-v01.herokuapp.com/UpdateProject/'+ data.id"  class='btn btn-warning' > Update </a>
                         </td>
                         <td>
                           <a class='btn btn-success' @click.prevent="click_finish(data.id)"> Finished </a>
@@ -55,7 +55,7 @@ export default ({
   },
   methods:{
     checklogin: function(){
-      axios.get('http://127.0.0.1:8000/api/showProject',{
+      axios.get('https://backend-v01.herokuapp.com/api/showProject',{
       })
       .then(response => {
         this.dataProject = response.data;
@@ -68,7 +68,7 @@ export default ({
     },
 
     click_finish: function(id){
-        axios.post('http://127.0.0.1:8000/api/finishProject/'+id,
+        axios.post('https://backend-v01.herokuapp.com/api/finishProject/'+id,
             this.user_localstore
         )
         .then( () => {

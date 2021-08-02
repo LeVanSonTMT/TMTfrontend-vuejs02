@@ -59,7 +59,7 @@ export default (  {
   methods: {
 
     register: function(){        
-      axios.post('http://127.0.0.1:8000/api/register', this.users)  
+      axios.post('https://backend-v01.herokuapp.com/api/register', this.users)  
       .then( () => {
         alert("Đăng tí tài khoản thành công");
         window.location.reload();
@@ -69,7 +69,7 @@ export default (  {
       });
     },
     checktype: function(){
-      axios.get('http://127.0.0.1:8000/api/getType',{
+      axios.get('https://backend-v01.herokuapp.com/api/getType',{
       })
       .then(response => {
         this.dataType_acc = response.data;
