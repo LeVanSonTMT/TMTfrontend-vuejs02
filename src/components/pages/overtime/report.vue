@@ -141,7 +141,7 @@ export default ({
       )
       .then( response => {
         this.dataReport = response.data;    
-         console.log(this.dataReport);
+         //console.log(this.dataReport);
 
       })
       .catch( error => {
