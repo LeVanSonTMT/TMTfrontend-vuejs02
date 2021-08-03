@@ -276,7 +276,7 @@ const routes = [
       path: "/Report",
       name: "Report",
       meta: {
-        auth: true
+//         auth: true
       },
       components:{
         default: admin,
