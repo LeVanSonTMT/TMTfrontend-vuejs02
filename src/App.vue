@@ -20,7 +20,7 @@ export default {
   }
 }
 </script>
-<style src="../dist/css/admin.css"></style>
+<style src="../plugins/admin.css"></style>
 <style src="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"></style>
 <style src="../plugins/icheck-bootstrap/icheck-bootstrap.min.css"></style>
 <style src="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css"></style>
