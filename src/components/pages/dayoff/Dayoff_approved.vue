@@ -48,7 +48,7 @@
                          {{data.off_reason}}
                       </td>
                      <td>
-                          <a :href="'http://frontendvuejs-v01.herokuapp.com/Dayoff_edit/'+data.id"  class="btn btn-warning btn-sm" ><i class="fas fa-pencil-alt"></i> Sửa </a>
+                          <a :href="'https://frontendvuejs-v01.herokuapp.com/Dayoff_edit/'+data.id"  class="btn btn-warning btn-sm" ><i class="fas fa-pencil-alt"></i> Sửa </a>
                           <a href="" class="btn btn-danger btn-sm" @click.prevent="click_detroy(data.id)" ><i class="fas fa-trash"></i> Xóa </a>
                         </td>
                   </tr>
